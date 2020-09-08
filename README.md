@@ -47,6 +47,11 @@ They are belonging to the proper CI/CD environment.
 
 Terraform returns the DNS name for each of the defined services. See the [outputs file](outputs.tf) for more details.
 
+## CI/CD
 
-[terraform]: https://www.terraform.io/
-[ecs]:       https://aws.amazon.com/ecs/
+A [Github Actions][githubactions] based CI/CD pipeline is configured. See the `.github` directory for more details.
+
+
+[githubactions]: https://github.com/features/actions
+[terraform]:     https://www.terraform.io/
+[ecs]:           https://aws.amazon.com/ecs/
