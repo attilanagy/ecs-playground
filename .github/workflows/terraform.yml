@@ -43,5 +43,5 @@ jobs:
     # On push to master, build or change infrastructure according to Terraform configuration files
     - name: Terraform Apply Staging Environment
       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-      run: terraform apply -auto-approve -var-file=environments/stg.tfvars
+      run: terraform workspace select stg && terraform apply -auto-approve -var-file=environments/stg.tfvars
      
