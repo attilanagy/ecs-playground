@@ -31,6 +31,14 @@ See the documentation of the modules for more information.
 
 ## Configuration
 
+Terraform state is stored in S3. There are some hard-coded values what you might to overwrite in [main.tf](main.tf) file.
+
+| Key    | Value           | Description                                |
+|--------|-----------------|--------------------------------------------|
+| bucket | s3-playground   | The name of the S3 bucket.                 |
+| key    | terraform.state | The name of the state file/object.         |
+| region | eu-central-1    | The region where you bucket is located at. |
+
 Input variables' default values support local development. You can easily overwrite them in the variable files inside the `environments` directory.
 
 They are belonging to the proper CI/CD environment.

@@ -6,3 +6,11 @@ provider "aws" {
 data "aws_availability_zones" "available" {
   state = "available"
 }
+
+terraform {
+  backend "s3" {
+    bucket = "ecs-playground"
+    key    = "ecs-playground.tfstate"
+    region = "eu-central-1"
+  }
+}
