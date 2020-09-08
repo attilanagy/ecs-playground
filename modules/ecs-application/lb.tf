@@ -35,6 +35,10 @@ resource "aws_lb_target_group" "containers" {
   port        = var.container_port
   protocol    = "HTTP"
   tags        = merge({ Name = var.name }, var.extra_tags)
+
+  depends_on  = [
+    aws_lb.lb
+  ]
 }
 
 resource "aws_lb_listener" "ecs" {
